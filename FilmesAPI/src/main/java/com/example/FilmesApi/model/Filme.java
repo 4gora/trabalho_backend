@@ -1,0 +1,100 @@
+package com.example.FilmesApi.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Filme {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String titulo;
+    private String genero;
+    private int duracao;
+    private String diretor;
+    private String anoLancamento;
+    private String pais;
+    private double imdb;
+
+
+    public Filme(String titulo, String genero, int duracao, String diretor, String anoLancamento, String pais, double imdb) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.duracao = duracao;
+        this.diretor = diretor;
+        this.anoLancamento = anoLancamento;
+        this.pais = pais;
+        this.imdb = imdb;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
+
+    public String getAnoLancamento() {
+        return anoLancamento;
+    }
+
+    public void setAnoLancamento(String anoLancamento) {
+        this.anoLancamento = anoLancamento;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public double getImdb() {
+        return imdb;
+    }
+
+    public void setImdb(double imdb) {
+        this.imdb = imdb;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme{" +
+                "titulo='" + titulo + '\'' +
+                ", genero='" + genero + '\'' +
+                ", duracao=" + duracao +
+                ", diretor='" + diretor + '\'' +
+                ", anoLancamento='" + anoLancamento + '\'' +
+                ", pais='" + pais + '\'' +
+                ", imdb=" + imdb +
+                '}';
+    }
+}
