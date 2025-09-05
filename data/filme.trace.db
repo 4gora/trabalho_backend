@@ -1,0 +1,12 @@
+2025-09-05 20:26:22.546042-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FILME" not found (this database is empty); SQL statement:
+select * from filme [42104-232]
+2025-09-05 20:26:25.984229-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FILME" not found (this database is empty); SQL statement:
+select * from filme [42104-232]
+2025-09-05 20:29:00.512277-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FILME" already exists; SQL statement:
+CREATE TABLE filme ( id BIGINT AUTO_INCREMENT PRIMARY KEY, titulo VARCHAR(50) NOT NULL, genero VARCHAR(30), duracao NUMERIC(3,0), diretor VARCHAR(50), ano_lancamento VARCHAR(4), pais VARCHAR(30), imdb NUMERIC(2,1) ) [42101-232]
+2025-09-05 20:29:19.326618-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "FILME" already exists; SQL statement:
+CREATE TABLE filme ( id BIGINT AUTO_INCREMENT PRIMARY KEY, titulo VARCHAR(50) NOT NULL, genero VARCHAR(30), duracao NUMERIC(3,0), diretor VARCHAR(50), ano_lancamento VARCHAR(4), pais VARCHAR(30), imdb NUMERIC(2,1) ) [42101-232]

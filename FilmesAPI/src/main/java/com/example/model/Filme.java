@@ -1,15 +1,18 @@
-package com.example.FilmesApi.model;
+package com.example.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
     private String titulo;
     private String genero;
     private int duracao;
@@ -27,6 +30,10 @@ public class Filme {
         this.anoLancamento = anoLancamento;
         this.pais = pais;
         this.imdb = imdb;
+    }
+
+    public Filme() {
+
     }
 
     public String getTitulo() {
