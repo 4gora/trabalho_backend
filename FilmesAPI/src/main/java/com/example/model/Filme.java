@@ -21,8 +21,12 @@ public class Filme {
     private String pais;
     private double imdb;
 
+    public Filme() {
+        
+    }
 
-    public Filme(String titulo, String genero, int duracao, String diretor, String anoLancamento, String pais, double imdb) {
+    public Filme(Long id, String titulo, String genero, int duracao, String diretor, String anoLancamento, String pais, double imdb) {
+        this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.duracao = duracao;
@@ -32,8 +36,12 @@ public class Filme {
         this.imdb = imdb;
     }
 
-    public Filme() {
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitulo() {
