@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS filme (
     diretor VARCHAR(50),
     ano_lancamento VARCHAR(4),
     pais VARCHAR(30),
-    imdb NUMERIC(2,1)
+    imdb NUMERIC(3,1) CHECK (imdb >= 0 AND imdb <= 10)
 );

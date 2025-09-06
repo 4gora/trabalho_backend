@@ -5,20 +5,26 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 
 @Entity
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
     @NotBlank
     private String titulo;
+
     private String genero;
     private int duracao;
     private String diretor;
     private String anoLancamento;
     private String pais;
+
+    @Min(0)
+    @Max(10)
     private double imdb;
 
     public Filme() {
