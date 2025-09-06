@@ -13,8 +13,8 @@ public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    @NotBlank
+
+    @NotBlank(message = "O campo título é obrigatório.")
     private String titulo;
 
     private String genero;
@@ -23,8 +23,8 @@ public class Filme {
     private String anoLancamento;
     private String pais;
 
-    @Min(0)
-    @Max(10)
+    @Min(value = 0, message = "A nota IMDb mínima é 0.")
+    @Max(value = 10, message = "A nota IMDb máxima é 10.")
     private double imdb;
 
     public Filme() {
