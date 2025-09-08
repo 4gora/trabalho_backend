@@ -4,6 +4,9 @@
 
 A API permite catalogar filmes, consultar informações detalhadas e obter estatísticas para análises. É ideal para quem deseja organizar uma coleção de filmes, realizar buscas por ano de lançamento, e obter dados para dashboards ou recomendações baseadas gênero, avaliação IMDb etc.
 
+## Link da API no Postman
+[FilmesAPI no Postman](https://documenter.getpostman.com/view/47021881/2sB3HnJKWg)
+
 ## Como rodar a API
 
 1. **Pré-requisitos**:
