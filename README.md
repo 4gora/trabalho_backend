@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-A FilmesAPI permite catalogar filmes, consultar informações detalhadas e obter estatísticas para análises. É ideal para quem deseja organizar uma coleção de filmes, realizar buscas por ano de lançamento, e obter dados para dashboards ou recomendações.
+A API permite catalogar filmes, consultar informações detalhadas e obter estatísticas para análises. É ideal para quem deseja organizar uma coleção de filmes, realizar buscas por ano de lançamento, e obter dados para dashboards ou recomendações baseadas gênero, avaliação IMDb etc.
 
 ## Como rodar a API
 
@@ -12,12 +12,12 @@ A FilmesAPI permite catalogar filmes, consultar informações detalhadas e obter
 
 2. **Instalação**:
    ```bash
-   mvnw clean install
+   mvn clean install
    ```
 
 3. **Execução**:
    ```bash
-   mvnw spring-boot:run
+   mvn spring-boot:run
    ```
    A API estará disponível em `http://localhost:8080`.
 
@@ -28,15 +28,16 @@ A FilmesAPI permite catalogar filmes, consultar informações detalhadas e obter
 - **Body (JSON):**
   ```json
   {
-    "titulo": "Exemplo",
-    "genero": "Ação",
-    "duracao": 120,
-    "diretor": "Diretor Exemplo",
-    "anoLancamento": "2022",
-    "pais": "Brasil",
-    "imdb": 8.5
+    "titulo": "Os Incríveis",
+    "genero": "Animação/Ação",
+    "duracao": 115,
+    "diretor": "Brad Bird",
+    "anoLancamento": "2004",
+    "pais": "EUA",
+    "imdb": 8 
   }
   ```
+- **ID:** O ID é criado e incrementado automaticamente.
 - **Resposta:** 201 Created, retorna o filme cadastrado.
 
 ### Listar todos os filmes
@@ -67,10 +68,10 @@ A FilmesAPI permite catalogar filmes, consultar informações detalhadas e obter
 ## Validação de dados
 
 - Campos obrigatórios: `titulo` (não pode ser vazio).
-- `imdb`: deve estar entre 0 e 10.
+- `imdb`: Deve ser um valor decimal entre 0 e 10.
 - Erros de validação retornam status 400 e mensagem personalizada.
 
-## Exemplos de resposta de erro
+## Exemplo de resposta de erro
 
 ```json
 {
